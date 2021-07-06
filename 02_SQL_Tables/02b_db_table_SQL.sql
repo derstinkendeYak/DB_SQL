@@ -40,5 +40,6 @@ INSERT INTO test(age,name) VALUES (35,"Alonzo");
 /* -- Tabelleninhalte anzeigen -- */
 SELECT * FROM test;
 
+#test
 
 
