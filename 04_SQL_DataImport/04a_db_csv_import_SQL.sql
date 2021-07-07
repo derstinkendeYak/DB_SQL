@@ -16,14 +16,14 @@ CREATE TABLE IF NOT EXISTS cats
     cat_age INT NOT NULL
 );
 
-#DESCRIBE cats;
+DESCRIBE cats;
 
 /* CSV-Date parsen */
 LOAD DATA LOCAL INFILE "04_SQL_DataImport/data/cats_export_no_id.csv" 
 INTO TABLE cats
 FIELDS TERMINATED BY ","
 LINES TERMINATED BY "\n"
-IGNORE 1 ROWS
+IGNORE 1 ROWS 
 (cat_name,fur_color,cat_age);
 
 
