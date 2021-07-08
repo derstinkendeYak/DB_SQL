@@ -26,8 +26,9 @@ FROM cats
 WHERE age > 35
 ;
 
-/* Delete - Vorsicht!! */
-DELETE FROM cats;  # Alle Daten sind weg!!
+/* Delete - DS löschen | Vorsicht!! */
+#DELETE FROM cats;  # Alle Daten sind weg!!
+DELETE FROM cats WHERE id = 2; #Sicher --> KEY
 SELECT * FROM cats; #gesamte Tabelle
 
-DESCRIBE cats;
+#DESCRIBE cats;
