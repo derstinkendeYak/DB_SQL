@@ -15,3 +15,16 @@ FROM ccc_list
 ORDER BY sector ASC
 ;
 
+-- Wieviele VERSCHIEDENE Sektoren ?
+SELECT
+    COUNT(DISTINCT sector) "Anzahl Sektoren"
+FROM ccc_list
+;
+
+
+
+
+
+
+
+
