@@ -5,8 +5,8 @@ USE boo;
 -- Preis der teuersten/günstigsten Aktie?
 /*
 SELECT
-	max(price) AS "Max. Preis"
-    #min(price) AS "Min. PREIS"
+	#MAX(price) AS "Max. Preis"
+    MIN(price) AS "Min. PREIS"
 FROM boo.ccc_list
 ;*/
 
@@ -23,8 +23,8 @@ SELECT
     c_name Unternehmen,
     price Aktienkurs
 FROM boo.ccc_list
-WHERE price = (SELECT max(price) FROM boo.ccc_list)  # Subquery / Klammern!
-#WHERE price = (SELECT min(price) FROM boo.ccc_list) 
+#WHERE price = (SELECT MAX(price) FROM boo.ccc_list)  # Subquery / Klammern!
+WHERE price = (SELECT MIN(price) FROM boo.ccc_list) 
 ;*/
 
 /*
@@ -33,6 +33,6 @@ SELECT
     c_name Unternehmen,
     price Aktienkurs
 FROM boo.ccc_list
-#ORDER BY price ASC
-ORDER BY price DESC
+ORDER BY price ASC
+#ORDER BY price DESC
 LIMIT 1;*/
