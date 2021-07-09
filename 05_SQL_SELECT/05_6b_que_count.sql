@@ -44,7 +44,9 @@ SELECT
     sector Industriesektoren, # NICHT aggregiert --> organisch
     COUNT(DISTINCT industry) Branchen #aggregiert --> durch Fkt. entstanden
 FROM ccc_list
+#WHERE sector LIKE "Con%" -- Filter in NICHT aggr. Feldern 
 GROUP BY sector # bei Kombination nicht aggr. /aggr.
+HAVING Branchen > 10 -- Filter in aggr. Felder / nach GROUP
 ORDER BY Branchen DESC
 ;
 
